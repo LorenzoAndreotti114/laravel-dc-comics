@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comics', function(Blueprint $table) {$table->id();
-        
+        Schema::create('comics', function(Blueprint $table) {
+            
+            $table->id();
             $table->string('title');
             $table->string('description');
             $table->string('thumb')->nullable();
@@ -21,7 +22,6 @@ return new class extends Migration
             $table->date('sale_sate');
             $table->string('type');
             $table->timestamps();
-        
         });
     }
 
